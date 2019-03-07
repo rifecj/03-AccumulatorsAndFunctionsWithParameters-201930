@@ -138,6 +138,7 @@ def example3():
     circle.fill_color = 'green'
     circle.attach_to(window)
 
+    square=rg.Square()
     # ------------------------------------------------------------------
     # Rectangle: needs two opposite corners.
     # ------------------------------------------------------------------
