@@ -16,7 +16,10 @@ def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
     #print_sequence1()
-    draw_circles1()
+    print_sequence1()
+  #  draw_circles1()
+    print_sequence2()
+    draw_circles2()
 
 def print_sequence1():
     """
@@ -50,7 +53,7 @@ def draw_circles1():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its doc-string above.
+    # DONE: 3. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # HINT: You might find a prior module useful when 'writing' this code.
@@ -61,6 +64,7 @@ def draw_circles1():
     print('--------------------------------------------------')
     window = rg.RoseWindow(width=400,height=400)
     turtle=rg.SimpleTurtle()
+    turtle.speed=20
     for k in range (20+1):
         turtle.pen_up()
         turtle.right(90)
@@ -82,7 +86,7 @@ def print_sequence2():
       390.
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement this function, per its doc-string above.
+    # done: 4. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
@@ -90,7 +94,10 @@ def print_sequence2():
     print('--------------------------------------------------')
     print('Running print_sequence2:')
     print('--------------------------------------------------')
-
+    sum=50
+    for k in range(18):
+        print(sum)
+        sum = sum + 20
 
 def draw_circles2():
     """
@@ -103,7 +110,7 @@ def draw_circles2():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement this function, per its doc-string above.
+    # done: 5. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
@@ -111,6 +118,19 @@ def draw_circles2():
     print('--------------------------------------------------')
     print('Running draw_circles2:  See graphics window')
     print('--------------------------------------------------')
+    window = rg.RoseWindow(400,400)
+    turtle=rg.SimpleTurtle()
+    turtle.speed=20
+    sum=50
+    for k in range(18):
+        center_point = rg.Point(sum, 100)
+        radius = 50
+        circle = rg.Circle(center_point, radius)
+        circle.fill_color = 'blue'
+        circle.attach_to(window)
+        window.render()
+        sum = sum + 20
+    window.close_on_mouse_click()
 
 
 def print_sequence3():
@@ -218,3 +238,4 @@ def draw_cosines_and_sines():
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
 main()
+

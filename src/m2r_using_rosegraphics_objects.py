@@ -77,8 +77,8 @@ def main():
       -- applying METHODS to them, and
       -- accessing their DATA via INSTANCE VARIABLES
     """
-    example1()
-    example2()
+    #example1()
+    #example2()
     example3()
 
 
@@ -138,7 +138,7 @@ def example3():
     circle.fill_color = 'green'
     circle.attach_to(window)
 
-    square=rg.Square()
+   # square=rg.Square()
     # ------------------------------------------------------------------
     # Rectangle: needs two opposite corners.
     # ------------------------------------------------------------------
